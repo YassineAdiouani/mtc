@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/annonce',function(){
-    return view('annonce');});
+Route::get('/contact',function(){
+    return view('contact');});
 Route::get('/',[FormationController::class,'index']);
 Route::get('/home',[HomeController::class,'index'])->middleware('auth')->name('home');
 
