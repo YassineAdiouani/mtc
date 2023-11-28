@@ -18,7 +18,9 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
             <li class="nav-item">
-				<a class="navbar-brand" href="/">MTC</a>
+				<a class="navbar-brand" href="/">
+					<x-application-logo/>
+				</a>
 			</li>
 			
 		</ul>
