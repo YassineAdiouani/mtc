@@ -15,9 +15,9 @@
 		position:fixed;top:0;left: 0;width:100%;
 		z-index:100" class="navbar navbar-expand-lg navbar-light ">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="/">
-					MTC
-				</a>
+				<a href="/">
+                    <x-application-logo/>
+                </a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
