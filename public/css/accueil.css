@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Playfair:opsz,wght@5..1200,700&display=swap');
+    *{
+        scroll-behavior: smooth;
+    }
+    .slider{
+        background-color:whitesmoke;
+        width:90%;
+        height:250px;
+        margin-top:20px;
+    }    
+    .carousel-container {
+        margin-bottom: 20px;
+      }
+      
+      .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+      }
+      /* cards css here */
+      .card {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+      }
+    
+      .card.fade-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .col-md-4{
+        margin-bottom: 40px;
+      }
+      .card img{
+        height: 150px;
+      }
+      .card-body a {
+        color: white;
+        background-color: #27374D;
+        border-color: #007bff;
+    }
+    .container {
+        padding: 20px;
+      }
+      
+      img {
+        max-width: 100%;
+        height: 250px;
+      }
+      
+      .row {
+        margin-bottom: 40px;
+        display: flex; /* Added */
+        flex-wrap: wrap; /* Added */
+      }
+      
+      .col-md-4 {
+        padding: 10px;
+        flex: 0 0 33.33%; /* Added */
+      }
