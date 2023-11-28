@@ -50,10 +50,10 @@
                     <span class="display-6 lh-1 text-blue mb-0"><i style="color: #f7c637" class='bx bx-tv'></i></span>
                     <div class="ms-4 h6 fw-normal mb-0">
                         <div class="d-flex">
-                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-delay="200" data-purecounter-duration="0">10</h5>
-                            <span class="mb-0 h5">K</span>
+                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-delay="200" data-purecounter-duration="0">100</h5>
+                            <span class="mb-0 h5">+</span>
                         </div>
-                        <p class="mb-0">Online Courses</p>
+                        <p class="mb-0">Formations en ligne</p>
                     </div>
                 </div>
             </div>
@@ -63,10 +63,10 @@
                     <span class="display-6 lh-1 text-blue mb-0"><i style="color: #1d3b53" class='bx bxs-user'></i></span>
                     <div class="ms-4 h6 fw-normal mb-0">
                         <div class="d-flex">
-                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-delay="200" data-purecounter-duration="0">200</h5>
+                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-delay="200" data-purecounter-duration="0">10</h5>
                             <span class="mb-0 h5">+</span>
                         </div>
-                        <p class="mb-0">Expert Tutors</p>
+                        <p class="mb-0">Tuteurs experts</p>
                     </div>
                 </div>
             </div>
@@ -76,10 +76,10 @@
                     <span class="display-6 lh-1 text-purple mb-0"><i style="color: #6f42c1" class='bx bxs-award' ></i></span>
                     <div class="ms-4 h6 fw-normal mb-0">
                         <div class="d-flex">
-                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-delay="200" data-purecounter-duration="0">60</h5>
+                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="60" data-purecounter-delay="200" data-purecounter-duration="0">5</h5>
                             <span class="mb-0 h5">K+</span>
                         </div>
-                        <p class="mb-0">Online Students</p>
+                        <p class="mb-0">Etudiant en ligne</p>
                     </div>
                 </div>
             </div>
@@ -89,10 +89,10 @@
                     <span class="display-6 lh-1 text-purple mb-0"><i style="color: #17a2b8" class='bx bxs-objects-horizontal-center'></i></span>
                     <div class="ms-4 h6 fw-normal mb-0">
                         <div class="d-flex">
-                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-delay="300" data-purecounter-duration="0">6</h5>
-                            <span class="mb-0 h5">K+</span>
+                            <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-delay="300" data-purecounter-duration="0">50</h5>
+                            <span class="mb-0 h5">+</span>
                         </div>
-                        <p class="mb-0">Certified Courses</p>
+                        <p class="mb-0">Formation Certifiée</p>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,8 @@
 
 <div class="row mb-4">
     <div class="col-lg-8 mx-auto text-center">
-        <h2 class="fs-1">Most Popular Courses</h2>
-        <p class="mb-0">Choose from hundreds of courses from specialist organizations</p>
+        <h2 class="fs-1">Formations les plus populaires</h2>
+        <p class="mb-0">Choisissez parmi des centaines de formations d'organismes spécialisés</p>
     </div>
 </div>
 

@@ -1,5 +1,5 @@
 @extends('admin.admin')
-@section('A-content')
+@section('edit-formation')
 <form method="POST" action="{{ route('formation.update', $f->id) }}">
   @csrf
   @method('put')
