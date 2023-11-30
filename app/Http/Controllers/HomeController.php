@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Formation;
 use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
@@ -14,7 +15,9 @@ class HomeController extends Controller
                 return view('user.pagep');
             }
             else if($usertype=='admin'){
-                return view('admin.index');
+                $users = User::All()->count();
+                $formations = Formation::All()->count();
+                return view('admin.index', compact('users','formations'));
             }
             else{
                 return redirect()->back();

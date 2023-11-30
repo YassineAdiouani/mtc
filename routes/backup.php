@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormationController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsController;
 use App\Http\Controllers\ForController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,23 +20,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/contact',function(){
-    return view('contact');
-});
-
+    return view('contact');});
 Route::get('/',[FormationController::class,'index']);
 Route::get('/home',[HomeController::class,'index'])->middleware('auth')->name('home');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('/formation', ForController::class);
-    Route::put('/formation/{id}', [ForController::class, 'update'])->name('formation.update');
+    Route::put('/formation/{id}', [ForController::class, 'update'])->name('formation.update');    
     Route::delete('/formation/{id}', [ForController::class, 'destroy'])->name('formation.destroy');
-    // user side
-    Route::delete('/user/{user}', [ForController::class, 'user_destroy'])->name('user.destroy');
-    Route::get('/user', [ForController::class, 'user_index'])->name('user.index');
-    Route::get('/user/create', [ForController::class, 'user_create'])->name('user.create');
-    Route::post('/user/store', [ForController::class, 'user_store'])->name('user.store');
-    Route::get('/user/{user}/edit', [ForController::class, 'user_edit'])->name('user.edit');
-    Route::put('/user/{user}', [ForController::class, 'user_update'])->name('user.update');
 });
 
 Route::middleware('auth')->group(function () {
