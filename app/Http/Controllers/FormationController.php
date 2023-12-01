@@ -11,4 +11,12 @@ class FormationController extends Controller
         $formation=Formation::SimplePaginate(6);
         return view('accueil',['f'=>$formation]);
     }
+
+    
+    // public function show(Formation $form){
+    //     return view('user.formation',compact('form'));
+    // }
+    public function for(Formation $form){
+        return view('user.formation',compact('form'));
+    }
 }

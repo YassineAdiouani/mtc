@@ -21,13 +21,14 @@ Route::get('/contact',function(){
     return view('contact');
 });
 
-Route::get('/',[FormationController::class,'index']);
-Route::get('/home',[HomeController::class,'index'])->middleware('auth')->name('home');
+Route::get('/',[FormationController::class, 'index']);
+Route::get('/home',[HomeController::class, 'index'])->middleware('auth')->name('home');
 
+Route::get('/for/{form}', [FormationController::class, 'for'])->middleware('auth')->name('formation.for');
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::resource('/formation', ForController::class);
     Route::put('/formation/{id}', [ForController::class, 'update'])->name('formation.update');
     Route::delete('/formation/{id}', [ForController::class, 'destroy'])->name('formation.destroy');
+    Route::resource('/formation', ForController::class);
     // user side
     Route::delete('/user/{user}', [ForController::class, 'user_destroy'])->name('user.destroy');
     Route::get('/user', [ForController::class, 'user_index'])->name('user.index');
@@ -36,7 +37,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/user/{user}/edit', [ForController::class, 'user_edit'])->name('user.edit');
     Route::put('/user/{user}', [ForController::class, 'user_update'])->name('user.update');
 });
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -22,6 +22,8 @@ class Admin
         return $next($request);
     }
     abort(403, 'not admin');
+
+   
 }
 
 }

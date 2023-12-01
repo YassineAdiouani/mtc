@@ -14,7 +14,7 @@ class ForController extends Controller
      */
     public function index()
     {
-        $formations = Formation::latest()->paginate(100);
+        $formations = Formation::latest()->paginate(10);
         return view('admin.Formation.index', compact('formations'));
     }
 

@@ -37,7 +37,7 @@
                         <i class="material-icons">notifications</i><span> 4 notification</span></a>
                         <ul class="collapse list-unstyled menu" id="homeSubmenu0">
                                         <li>
-                                        <a href="#">You have 5 new messages</a>
+                                        <a href="#">ded have 5 new messages</a>
                                         </li>
                                         <li>
                                             <a href="#">You're now friend with Mike</a>
@@ -214,42 +214,39 @@
     
                         <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">   
-                                <li class="dropdown nav-item active">
-                                    <a href="#" class="nav-link" data-toggle="dropdown">
-                                       <span class="material-icons">notifications</span>
-                                       {{-- <span class="notification">4</span> --}}
-                                   </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">You have 5 new messages</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">You're now friend with Mike</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Wish Mary on her birthday!</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">5 warnings in Server Console</a>
-                                        </li>
-                                      
-                                    </ul>
-                                </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ route('home') }}">
                                     <span class="material-icons">apps</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ route('profile.edit') }}">
                                     <span class="material-icons">person</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="dropdown nav-item active">
+                                    <a href="#" class="nav-link" data-toggle="dropdown">
+                                        <span class="material-icons">settings</span>
+                                       {{-- <span class="notification">4</span> --}}
+                                   </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="/">retour à la page d'accueil</a>
+                                        </li>
+                                        <li>
+                                            <form action="{{ route('logout') }}" method="post">
+                                                @csrf
+                                                <button style="border: none;outline:none"><a style="color: red">Se déconnecter</a></button>
+                                            </form>
+                                        </li>
+                                      
+                                    </ul>
+                                </li>
+                                {{-- <li class="nav-item">
                                     <a class="nav-link" href="#">
                                     <span class="material-icons">settings</span>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -267,11 +264,6 @@
                       <div class="col-md-6">
                         <nav class="d-flex">
                             <ul class="m-0 p-0">
-                                <li>
-                                    <a href="#">
-                                        Accueil
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="#">
                                         Formation

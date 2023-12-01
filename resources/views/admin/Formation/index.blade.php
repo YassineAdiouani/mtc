@@ -125,9 +125,9 @@
                                                             <td>{{ $one->nom }}</td>
                                                             <td class="For_maxWidth">{{ $one->description }}</td>
                                                             <td>{{ $one->lien }}h</td>
-                                                            <td>{{ $one->created_at->format('Y/m/d') }}</td>
+                                                            <td>{{ $one->created_at->format('Y/m/d')}}</td>
                                                             <td class="d-flex align-center justify-center">
-                                                                <a title="View" href="#"><i class='bx bx-play-circle'></i></a>
+                                                                <a title="View" href="{{ route('formation.for', $one->id) }}"><i class='bx bx-play-circle'></i></a>
                                                                 <a title="Edit" class="mx-3" href="{{ route('formation.edit', $one->id) }}"><i class='bx bxs-message-square-edit'></i></a>
                                                                 <form method="POST" action="{{ route('formation.destroy', $one->id) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')">
                                                                     @csrf
