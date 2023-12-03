@@ -13,17 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('formations', function (Blueprint $table) {
+        Schema::create('userforms', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('nom');
-            $table->text('description');
-            $table->text('Necessites');
-            $table->integer('duree');
-            $table->float('price');
-            $table->string('trailer');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('formation_id');
             $table->timestamps();
-            
+            $table->foreign('formation_id')->references('id')->on('formations')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('formations');
+        Schema::dropIfExists('userforms');
     }
 };

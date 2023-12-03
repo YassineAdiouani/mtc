@@ -96,7 +96,10 @@
                                 <div class="card" style="min-height: 485px">
                                     <div class="card-header card-header-text">
                                         <h4 class="card-title">Statistiques et promotions des utilisateurs</h4>
-                                        <p class="category">De là, vous pouvez modifier la validité de chaque utilisateur</p>
+                                        <div class="d-flex" style="justify-content: space-between;align-items: center">
+                                            <p class="category">De là, vous pouvez modifier la validité de chaque formation</p>
+                                            <a class="btn text-light" style="background: #054789" href="{{ route('user.create') }}">Ajouter</a>
+                                        </div>
                                     </div>
                                     <div class="card-content table-responsive">
                                         <table class="table table-hover">
@@ -120,7 +123,7 @@
                                                         <tr>
                                                             <td>{{ $key + 1 }}</td>
                                                             <td>{{ $one->name }}</td>
-                                                            <td>{{ $one->email }}</td>
+                                                            <td>{{ $one->email }} ti</td>
                                                             <td>{{ $one->password }}</td>
                                                             <td>{{ $one->usertype }}</td>
                                                             <td class="d-flex align-center justify-center">

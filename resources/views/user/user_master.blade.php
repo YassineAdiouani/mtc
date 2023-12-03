@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTC</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
     <header>
@@ -22,11 +23,11 @@
                         <a href="/" class="nav-link">Accueil</a>
                     </li>
                     @auth
-                    @if(Auth::user()->usertype === 'user')
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Mes formations</a>
-                        </li>
-                    @endif
+                        @if(Auth::user()->usertype === 'user')
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">Mes formations</a>
+                            </li>
+                        @endif
                     @endauth
                     <li class="nav-item">
                         <a href="" class="nav-link">Contact</a>

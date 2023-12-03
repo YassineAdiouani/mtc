@@ -39,6 +39,17 @@
                 @enderror
             </div>
 
+            <div class="mb-3">
+                <label for="password" class="form-label">Formation</label>
+                <select class="form-control" name="Formation" id="Formation">
+                    <option value="Formation">Formation1</option>
+                    <option value="Formation">Formation2</option>
+                    <option value="Formation">Formation3</option>
+                </select>
+                @error('password')
+                    <div class="form-text text-danger" style="font-size: 14px">{{ $message }}</div>
+                @enderror
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

@@ -4,13 +4,21 @@
 
 @section('content')
     <div class="container my-5">
-        <h2>Ajouter Utilisateur</h2>
+        <h2>Ajouter Formation</h2>
         <form method="POST" action="{{ route('formation.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="nom" class="form-label">Titre</label>
                 <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom') }}">
                 @error('nom')
+                    <div class="form-text text-danger" style="font-size: 14px">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="mb-3">
+                <label for="Necessites" class="form-label">Nécessités (niveau)</label>
+                <textarea style="resize: none" class="form-control" name="Necessites" id="Necessites" cols="15" rows="5">{{ old('Necessites') }}</textarea>
+                @error('Necessites')
                     <div class="form-text text-danger" style="font-size: 14px">{{ $message }}</div>
                 @enderror
             </div>
@@ -24,9 +32,27 @@
             </div>
 
             <div class="mb-3">
-                <label for="lien" class="form-label">Lien</label>
-                <input type="number" min="0" max="10" class="form-control" id="lien" name="lien" value="{{ old('lien') }}">
-                @error('lien')
+                <label for="duree" class="form-label">Durée (heurs)</label>
+                <input type="number" min="0" max="10" class="form-control" id="duree" name="duree" value="{{ old('duree') }}">
+                @error('duree')
+                    <div class="form-text text-danger" style="font-size: 14px">{{ $message }}</div>
+                @enderror
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="price" class="form-label">price (dh)</label>
+                <input type="number" class="form-control" id="price" name="price" value="{{ old('price') }}">
+                @error('price')
+                    <div class="form-text text-danger" style="font-size: 14px">{{ $message }}</div>
+                @enderror
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="trailer" class="form-label">Trailer Video</label>
+                <input type="file" class="form-control" id="trailer" name="trailer" value="{{ old('trailer') }}">
+                @error('trailer')
                     <div class="form-text text-danger" style="font-size: 14px">{{ $message }}</div>
                 @enderror
             </div>

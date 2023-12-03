@@ -8,7 +8,7 @@
                                 <div class="card card-stats">
                                     <div class="card-header">
                                         <div class="icon icon-warning">
-                                           <span class="material-icons">equalizer</span>
+                                            <span class="material-icons">equalizer</span>
                                         </div>
                                     </div>
                                     <div class="card-content">
@@ -27,7 +27,7 @@
                                 <div class="card card-stats">
                                     <div class="card-header">
                                         <div class="icon icon-rose">
-                                           <span class="material-icons">shopping_cart</span>
+                                            <span class="material-icons">shopping_cart</span>
     
                                         </div>
                                     </div>
@@ -97,7 +97,10 @@
                                 <div class="card" style="min-height: 485px">
                                     <div class="card-header card-header-text">
                                         <h4 class="card-title">Statistiques et promotions des utilisateurs</h4>
-                                        <p class="category">De là, vous pouvez modifier la validité de chaque utilisateur</p>
+                                        <div class="d-flex" style="justify-content: space-between;align-items: center">
+                                            <p class="category">De là, vous pouvez modifier la validité de chaque formation</p>
+                                            <a class="btn text-light" style="background: #054789" href="{{ route('formation.create') }}">Ajouter</a>
+                                        </div>
                                     </div>
                                     <div class="card-content table-responsive">
                                         <table class="table table-hover">

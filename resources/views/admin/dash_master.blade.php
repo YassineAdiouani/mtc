@@ -17,8 +17,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        @yield('style')
     </head>
     <body>
+        @yield('scripts')
         <div class="wrapper">
     <div class="body-overlay"></div>
             <!-- Sidebar  -->
@@ -88,6 +90,9 @@
                             </li>
                             <li>
                                 <a href="{{ route('formation.create') }}">Ajouter des Formations</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('playlist.create') }}">Ajouter Videos de formation</a>
                             </li>
                         </ul>
                     </li>

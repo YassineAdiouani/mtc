@@ -64,24 +64,26 @@
                     <li class="nav-item me-4">
                         <a class="nav-link active" aria-current="page" href="/">Accueil</a>
                     </li>
-                    @if(auth()->user()->usertype != 'admin')
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="/contact">Contact</a>
-                        </li>
-                    @endif
                     @if (Route::has('login'))
+                    @auth
+                        @if(auth()->user()->usertype != 'admin')
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+                        @endif
+                    @endauth
                     @auth
                         <li class="nav-item me-4">
                             @if(auth()->user()->usertype == 'admin')
                                 <a class="nav-link" href="{{ url('/home') }}" class="button">Dashboard</a>
                             @else
-                                <a class="nav-link" href="{{ url('/home') }}" class="button">Mon compte</a>
+                                <a class="nav-link" href="{{ route('mesformations') }}" class="button">Mes Formation</a>
                             @endif
                         </li>
                         <li class="nav-item me-4">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button class="btn btn-secondary" type="submit">Log Out</button>
+                                <button class="btn text-light" style="background: #054789" type="submit">Log Out</button>
                             </form>
                         </li>
                     @else
@@ -114,6 +116,7 @@
     <div class="body">
         @yield('contenu')
         @yield('contact')
+        @yield('formation')
     </div>
 
     <div class="container footer p-4">

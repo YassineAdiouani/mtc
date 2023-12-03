@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Formation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ForController extends Controller
 {
@@ -51,20 +52,30 @@ class ForController extends Controller
         $request->validate([
             'nom' => 'required|string|max:255',
             'description' => 'required|string',
-            'lien' => 'required|integer|min:0|max:10',
+            'Necessites' => 'required|string',
+            'duree' => 'required|integer|min:0',
+            'price' => 'required|numeric',
+            'trailer' => 'required|file|mimes:mp4',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2044',
         ]);
 
         $imagePath = $request->file('image')->store('formation_images', 'public');
+
+        $trailerPath = $request->file('trailer')->store('formation_videos', 'public');
+
         $formation = new Formation([
             'nom' => $request->input('nom'),
             'description' => $request->input('description'),
-            'lien' => $request->input('lien'),
+            'Necessites' => $request->input('Necessites'),
+            'duree' => $request->input('duree'),
+            'price' => $request->input('price'),
+            'trailer' => asset('storage/' . $trailerPath),
             'image' => asset('storage/' . $imagePath),
         ]);
+
         $formation->save();
 
-        return redirect()->route('formation.index')->with('success', "Formation <strong>$formation->nom</strong> créé avec succès.");
+        return redirect()->route('formation.index')->with('success', "Formation <strong>$formation->nom</strong> created successfully.");
     }
     
     public function user_store(Request $request)
